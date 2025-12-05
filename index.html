@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satya Priya Poka | Full-stack Developer Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .skill-tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            background-color: #e0f2fe; /* Light Blue */
+            color: #0c4a6e; /* Dark Blue Text */
+            transition: all 0.2s;
+        }
+        .skill-tag:hover {
+            background-color: #bae6fd;
+            transform: scale(1.02);
+        }
+        .section-header {
+            border-left: 4px solid #3b82f6; /* Blue border */
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#hero" class="text-2xl font-bold text-gray-900 tracking-tight">
+                    <span class="text-blue-600">S.P.</span> Poka
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-150">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition duration-150">Skills</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition duration-150">Experience</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition duration-150">Projects</a>
+                    <a href="#education" class="text-gray-600 hover:text-blue-600 transition duration-150">Education</a>
+                </div>
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button class="md:hidden p-2 text-gray-500 hover:text-blue-600 transition duration-150" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-sm">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Skills</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Experience</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Projects</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Education</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- 1. Hero Section & Contact -->
+        <section id="hero" class="flex flex-col lg:flex-row items-center justify-between pt-10 pb-16 bg-white p-6 rounded-xl shadow-lg">
+            <div class="lg:w-3/5">
+                <p class="text-lg font-medium text-blue-600 mb-2">Hello, I'm</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-gray-900">Satya Priya Poka</h1>
+                <h2 class="text-2xl md:text-3xl font-light text-gray-600 mb-6 border-b-2 pb-2 border-blue-100">Full-stack Developer | AI/ML Enthusiast</h2>
+                <p class="text-gray-700 max-w-xl leading-relaxed mb-8">
+                    A results-oriented developer specializing in building scalable Single-Page Applications (SPAs) using Angular and Vue.js, backed by robust database integration with MySQL, RESTful, and GraphQL APIs. Master of Science candidate focused on leveraging technology for complex problem-solving.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                        View Projects &rarr;
+                    </a>
+                    <a href="mailto:pokasatyapriya@gmail.com" class="px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Info Card -->
+            <div class="lg:w-2/5 mt-10 lg:mt-0 lg:ml-8 bg-gray-50 p-6 rounded-xl shadow-inner border border-gray-200 w-full max-w-sm">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    Contact Details
+                </h3>
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li><span class="font-medium">Email:</span> pokasatyapriya@gmail.com</li>
+                    <li><span class="font-medium">Mobile:</span> +1 769-280-0734</li>
+                    <li class="flex items-center">
+                        <span class="font-medium mr-1">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/in/front-end-development/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-150">
+                            Satya Priya
+                            <svg class="w-4 h-4 inline ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.535-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </li>
+                    <li><span class="font-medium">Location:</span> Hattiesburg, MS</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. Skills Section -->
+        <section id="skills" class="bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-8 section-header text-gray-900">Core Technical Skills</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Frontend -->
+                <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Frontend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Material-UI</span>
+                        <span class="skill-tag">Responsive Web Design</span>
+                    </div>
+                </div>
+
+                <!-- Backend / Integration -->
+                <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Backend & Integration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">SOAP</span>
+                        <span class="skill-tag">JSON</span>
+                        <span class="skill-tag">AJAX</span>
+                    </div>
+                </div>
+
+                <!-- Databases / Tools -->
+                <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Databases & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">NOSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Webpack/Babel</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Experience Section -->
+        <section id="experience" class="bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-8 section-header text-gray-900">Professional Experience</h2>
+
+            <div class="space-y-10">
+
+                <!-- Deloitte -->
+                <div class="relative pl-8 border-l-4 border-blue-200">
+                    <div class="absolute w-3 h-3 bg-blue-600 rounded-full mt-1.5 -left-1.5"></div>
+                    <div class="mb-4 p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-bold text-gray-900">Full-stack Developer <span class="text-blue-600">(Contract)</span></h3>
+                        <p class="text-lg font-medium text-gray-700">Deloitte</p>
+                        <p class="text-sm text-gray-500 mb-4">Bengaluru, Karnataka, India | Mar 2023 – Dec 2023</p>
+                        <ul class="list-disc ml-6 text-gray-700 space-y-2">
+                            <li>Built scalable SPAs using Angular and Vue.js; implemented Vue Router, Vuex, and Angular data binding for effective state management.</li>
+                            <li>Developed CRUD operations with MySQL and integrated RESTful, GraphQL, and SOAP-based web services.</li>
+                            <li>Managed the full application lifecycle (development, testing, deployment); automated builds using Ant and Webpack.</li>
+                            <li>Automated UI testing using Selenium and ensured compliance through collaboration with QA teams.</li>
+                            <li>Collaborated with UI/UX teams, conducting user research and usability testing to deliver intuitive user experiences.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Flipkart -->
+                <div class="relative pl-8 border-l-4 border-blue-200">
+                    <div class="absolute w-3 h-3 bg-blue-600 rounded-full mt-1.5 -left-1.5"></div>
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-bold text-gray-900">Frontend Developer Intern</h3>
+                        <p class="text-lg font-medium text-gray-700">Flipkart</p>
+                        <p class="text-sm text-gray-500 mb-4">Hyderabad, Telangana, India | Jan 2022 – Dec 2022</p>
+                        <ul class="list-disc ml-6 text-gray-700 space-y-2">
+                            <li>Developed, tested, and maintained fully responsive and interactive web applications.</li>
+                            <li>Converted detailed UI/UX wireframes into high-quality, production-ready frontend code.</li>
+                            <li>Optimized applications for maximum speed, scalability, and cross-browser compatibility.</li>
+                            <li>Maintained and enhanced the existing codebase with clean, efficient, and well-documented code.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects & Research Section -->
+        <section id="projects" class="bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-8 section-header text-gray-900">Featured Projects & Research</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Projects -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Projects</h3>
+                    
+                    <div class="p-5 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                        <h4 class="text-xl font-bold text-blue-600">Full Stack Amazon Clone</h4>
+                        <p class="text-sm font-mono text-gray-500 mb-3">React.js, Material-UI, Context API, Firebase Auth/Firestore, Stripe API</p>
+                        <p class="text-gray-700">Built a responsive frontend using React.js and Context API. Implemented secure login with Firebase Auth and real-time synchronization with Firestore. Enabled checkout flow using the Stripe API and deployed using Firebase Hosting.</p>
+                    </div>
+
+                    <div class="p-5 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                        <h4 class="text-xl font-bold text-blue-600">AI-powered Phishing Detection System</h4>
+                        <p class="text-sm font-mono text-gray-500 mb-3">Machine Learning (ELM-based), Full-stack Interface, Visualization Dashboards</p>
+                        <p class="text-gray-700">Implemented a machine learning model (ELM-based) to classify phishing URLs using 100+ features, deployed using a full-stack interface with visualization dashboards.</p>
+                    </div>
+
+                    <div class="p-5 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                        <h4 class="text-xl font-bold text-blue-600">RAG-based Chatbot</h4>
+                        <p class="text-sm font-mono text-gray-500 mb-3">LangChain, Vector Embeddings, Custom LLM Pipeline</p>
+                        <p class="text-gray-700">Built a Retrieval-Augmented Generation (RAG) chatbot using LangChain, vector embeddings, and a custom LLM pipeline for enterprise document search.</p>
+                    </div>
+                </div>
+
+                <!-- Research -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Research Experience</h3>
+
+                    <div class="p-5 border border-gray-200 rounded-lg shadow-sm bg-gray-50">
+                        <h4 class="text-xl font-bold text-blue-600">Prosense - Defending Text-Generating Models</h4>
+                        <p class="text-sm font-medium text-gray-500 mb-3">Jan 2025 – Apr 2025</p>
+                        <ul class="list-disc ml-5 text-gray-700 space-y-1">
+                            <li>Built a multi-stage adversarial training pipeline for Mistral-7B using LORA across 400K samples, improving robustness by 30%.</li>
+                            <li>Evaluated and structured TruthfulQA failures using Graph-of-Thought (GoT) tags with a LLaMA 3-8B quantized model.</li>
+                            <li>Completed two full feedback cycles, increasing TruthfulQA pass rate from 35% to 55%.</li>
+                            <li>Optimized training for single-GPU environments (A100/H100) using RunPod.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Education & Certifications -->
+        <section id="education" class="bg-white p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-8 section-header text-gray-900">Education & Achievements</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Education -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">Formal Education</h3>
+                    
+                    <!-- USM -->
+                    <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                        <h4 class="text-xl font-bold text-blue-600">Master of Science in Computer and Information Science</h4>
+                        <p class="text-lg font-medium text-gray-700">University of Southern Mississippi</p>
+                        <p class="text-sm text-gray-500">Hattiesburg, MS | Jan 2023 – Dec 2025</p>
+                    </div>
+                    
+                    <!-- Vignan's -->
+                    <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                        <h4 class="text-xl font-bold text-blue-600">Bachelor's in Computer Science</h4>
+                        <p class="text-lg font-medium text-gray-700">Vignan's Institute of Information Technology</p>
+                        <p class="text-sm text-gray-500">Guntur, India | July 2019 – May 2023</p>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">Certifications & Honors</h3>
+                    <ul class="space-y-3">
+                        <li class="p-4 border border-gray-200 rounded-lg flex items-center bg-yellow-50">
+                            <svg class="w-6 h-6 text-yellow-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span class="font-medium text-gray-700">Phi Kappa Phi Honor Society (Top 10% of Graduate Students)</span>
+                        </li>
+                        <li class="p-4 border border-gray-200 rounded-lg flex items-center">
+                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.005 12.005 0 0012 21a12.005 12.005 0 008.618-3.04z"></path></svg>
+                            <span class="text-gray-700">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</span>
+                        </li>
+                        <li class="p-4 border border-gray-200 rounded-lg flex items-center">
+                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.005 12.005 0 0012 21a12.005 12.005 0 008.618-3.04z"></path></svg>
+                            <span class="text-gray-700">Advanced Cloud DevOps (Issued by Intel)</span>
+                        </li>
+                        <li class="p-4 border border-gray-200 rounded-lg flex items-center">
+                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.005 12.005 0 0012 21a12.005 12.005 0 008.618-3.04z"></path></svg>
+                            <span class="text-gray-700">IBM Ecosystem Cloud Native Developer</span>
+                        </li>
+                        <li class="p-4 border border-gray-200 rounded-lg flex items-center">
+                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.005 12.005 0 0012 21a12.005 12.005 0 008.618-3.04z"></path></svg>
+                            <span class="text-gray-700">Software Developer Hackerrank</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-gray-700 pb-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">Satya Priya Poka</h3>
+                    <p class="text-sm text-gray-400">Full-stack Developer | AI/ML Enthusiast</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#about" class="hover:text-blue-400 transition">About Me</a></li>
+                        <li><a href="#experience" class="hover:text-blue-400 transition">Experience</a></li>
+                        <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-3">Connect</h4>
+                    <p class="text-sm text-gray-400">pokasatyapriya@gmail.com</p>
+                    <p class="text-sm text-gray-400">+1 769-280-0734</p>
+                    <a href="https://www.linkedin.com/in/front-end-development/" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-blue-400 hover:text-blue-200 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.535-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500">&copy; 2024 Satya Priya Poka. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
